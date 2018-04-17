@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>GIPHY</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- My css file linked -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome Icons CDN -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
+    <!-- Google Drive API -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+    <div class="page-header">
+        <h1>Welcome to the worlds best GIF search page!
+            <small>start typing in a box to get started</small>
+        </h1>
+    </div>
+
+    <div class="container">
+        <div id="buttons-view"></div>
+        <br>
+        <form id="gif-form">
+            <label for="gif-input">Add a gif</label>
+
+            <input type="text" id="gif-input">
+
+
+            <!-- Button triggers new movie to be added -->
+            <span>
+                <input id="add-gif" type="submit" value="Submit">
+            </span>
+        </form>
+        <br>
+        <!-- Movies will get dumped Dere -->
+        <div class="row" id="gif-view"></div>
+    </div>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div style="color: #f7931a; padding: 5px;" class="text-center">
+            <i class="fab fa-bitcoin fa-2x"></i>
+            <span> 1GRMiDcDMnVQWEgjgYUasN8WQFwUUWbgko</span>
+        </div>
+        <div style="color:#92cdf7; padding: 5px;" class="text-center">
+            <i class="fab fa-ethereum fa-2x"></i>
+            <span> 0x89b2fa03c14425e20f5170542d39ca7e6a50cdf0</span>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- My Javascript file linked -->
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
