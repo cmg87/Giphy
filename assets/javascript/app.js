@@ -1,4 +1,11 @@
 var gifs = ["ferrari 458", "lamborghini aventador", "mclaren p1"];
+var limit = 10;
+var offset = 0;
+console.log(offset);
+$(".rslt").click(function(){
+    limit = $(this).val();
+   
+});
 
 function renderButtons() {
     $("#buttons-view").empty();
@@ -22,11 +29,12 @@ $("#add-gif").on("click", function (event) {
 
 renderButtons();
 
-$("body").on("click", "button", function () {
+$("body").on("click", ".gifs", function () {
     $("#gif-view").empty();
+    offset = Math.floor(Math.random() * 50);
     var giphy = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        giphy + "&api_key=dc6zaTOxFJmzC&limit=10";
+        giphy + "&api_key=dc6zaTOxFJmzC&limit="+limit+"&offset="+offset;
 
     $.ajax({
         url: queryURL,
@@ -72,16 +80,12 @@ $(document).on("ready", function(){
     });
 });
 
+$(function(){
 
-// $("body").on("mouseenter",".gif", function () {
-//     var newState = $(this).attr("data-animate");
-//     var state = $(this).attr("data-state");
-//     $(this).attr("src", newState);
-//     state = $(this).attr("data-state", "animate");
-// });
+    $(".dropdown-menu").on('click', 'li', function(){
+      $(".btn:first-child").text($(this).text());
+      $(".btn:first-child").val($(this).text());
+   });
 
-// $("body").on("mouseleave",".gif", function () {
-//     newState = $(this).attr("data-still");
-//     state = $(this).attr("data-state", "still");
-//     $(this).attr("src", newState);
-// });
+});
+

@@ -10,16 +10,11 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <!-- My css file linked -->
+          <!-- My css file linked -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
     <!-- Font Awesome Icons CDN -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
         crossorigin="anonymous"></script>
-    <!-- Google Drive API -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
@@ -38,14 +33,29 @@
             <input type="text" id="gif-input">
 
 
-            <!-- Button triggers new movie to be added -->
+
             <span>
                 <input id="add-gif" type="submit" value="Submit">
             </span>
-        </form>
-        <br>
-        <!-- Movies will get dumped Dere -->
-        <div class="row" id="gif-view"></div>
+            <span>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="drop"># of Results
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="text-center rslt" value="10">10</li>
+                        <li class="text-center rslt" value="15">15</li>
+                        <li class ="text-center rslt" value="25">25</li>
+                    </ul>
+                </div>
+    </div>
+    </span>
+    </form>
+
+
+    <br>
+
+    <div class="row" id="gif-view"></div>
     </div>
 
     <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
@@ -61,6 +71,8 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <!-- My Javascript file linked -->
     <script src="assets/javascript/app.js"></script>
 
