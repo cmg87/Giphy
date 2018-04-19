@@ -22,9 +22,15 @@ function renderButtons() {
 $("#add-gif").on("click", function (event) {
     event.preventDefault();
     var gif = $("#gif-input").val().trim();
-    gifs.push(gif);
-    renderButtons();
-    $("#gif-form")[0].reset();
+    if(gif == ''){
+        alert("cannot enter blank");
+    }
+    else{
+        gifs.push(gif);
+        renderButtons();
+        $("#gif-form")[0].reset();
+    }
+
 });
 
 renderButtons();
@@ -49,6 +55,9 @@ $("body").on("click", ".gifs", function () {
         for (var i = 0; i < results.length; i++) {
             var gifDiv = $("<div>");
             var p = $("<p>");
+            var a = $("<a>");
+            a.attr("href", results[i].images.fixed_height.url);
+            a.attr("download","image");
             p.text("Rating: "+results[i].rating.toUpperCase());
             var gifImage = $("<img>");
             gifImage.attr("src", results[i].images.fixed_height_still.url);
@@ -57,7 +66,8 @@ $("body").on("click", ".gifs", function () {
             gifImage.attr("data-state", "still");
             gifImage.addClass("gif img-responsive");
             gifDiv.append(p);
-            gifDiv.append(gifImage);
+            a.append(gifImage);
+            gifDiv.append(a);
             gifDiv.addClass("col-xs-4");
             $("#gif-view").prepend(gifDiv);
         }
